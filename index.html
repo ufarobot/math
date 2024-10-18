@@ -2,12 +2,6 @@
 <html>
 
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.min.js"></script>
-<iframe src="https://вашсайт.com/вашдокумент.html" id="myIframe"></iframe>
-
-<script>
-  iFrameResize({ log: true }, '#myIframe');
-</script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,6 +131,14 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
 <hr>
 <p><strong>Множества</strong> являются фундаментальным понятием в математике и широко используются в различных разделах науки и техники. Понимание основных свойств и способов задания множеств важно для дальнейшего изучения математики и информатики.</p>
 </div>
+  <script>
+    function sendHeight() {
+      var height = document.body.scrollHeight;
+      window.parent.postMessage(height, '*');
+    }
+    window.onload = sendHeight;
+    window.onresize = sendHeight;
+  </script>
 </body>
 
 </html>
